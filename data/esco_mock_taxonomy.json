@@ -1,0 +1,115 @@
+{
+  "Python Programming": [
+    "Python",
+    "Python 3",
+    "Python3",
+    "Django",
+    "Flask",
+    "FastAPI",
+    "PySpark"
+  ],
+  "Frontend Development": [
+    "ReactJS",
+    "React.js",
+    "React",
+    "Vue",
+    "Vue.js",
+    "Angular",
+    "Frontend",
+    "UI Development",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "JS",
+    "TypeScript",
+    "TS"
+  ],
+  "Backend Development": [
+    "Node.js",
+    "Node",
+    "Express",
+    "Backend",
+    "API Development",
+    "Microservices",
+    "Java",
+    "Spring Boot",
+    "C#",
+    ".NET",
+    "Ruby on Rails",
+    "Go",
+    "Golang"
+  ],
+  "Machine Learning": [
+    "Machine Learning",
+    "ML",
+    "Deep Learning",
+    "DL",
+    "Artificial Intelligence",
+    "AI",
+    "NLP",
+    "Natural Language Processing",
+    "Computer Vision",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn"
+  ],
+  "Data Engineering": [
+    "Data Engineering",
+    "ETL",
+    "Data Pipelines",
+    "Apache Spark",
+    "Spark",
+    "Hadoop",
+    "Kafka"
+  ],
+  "Database Management": [
+    "SQL",
+    "MySQL",
+    "PostgreSQL",
+    "NoSQL",
+    "MongoDB",
+    "Redis",
+    "Neo4j",
+    "Graph Database"
+  ],
+  "Cloud Computing": [
+    "Cloud",
+    "AWS",
+    "Amazon Web Services",
+    "Azure",
+    "Microsoft Azure",
+    "GCP",
+    "Google Cloud Platform",
+    "Docker",
+    "Kubernetes",
+    "K8s",
+    "Terraform",
+    "DevOps",
+    "CI/CD"
+  ],
+  "Soft Skills": [
+    "Leadership",
+    "Communication",
+    "Teamwork",
+    "Problem Solving",
+    "Critical Thinking",
+    "Agile",
+    "Scrum"
+  ],
+  "Software Engineer": [
+    "Software Engineer",
+    "Software Developer",
+    "SDE",
+    "Full Stack Engineer",
+    "Full Stack Developer",
+    "Backend Engineer",
+    "Frontend Engineer"
+  ],
+  "Data Scientist": [
+    "Data Scientist",
+    "Machine Learning Engineer",
+    "ML Engineer",
+    "AI Engineer",
+    "NLP Engineer"
+  ]
+}
