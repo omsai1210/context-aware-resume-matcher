@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import ingest, extract
+from routers import ingest, extract, match, dispatch, analytics, bulk_process, admin
 
 app = FastAPI(
-    title="GraphRAG-ATS - Module 1: Document Ingestion",
-    description="API for ingesting resumes and performing blind ranking via PII extraction.",
+    title="GraphRAG-ATS - Full Pipeline",
+    description="API for context-aware resume matching with LLM feedback and automated email dispatch.",
     version="1.0.0"
 )
 
@@ -19,6 +19,11 @@ app.add_middleware(
 
 app.include_router(ingest.router, prefix="/api/v1", tags=["document-ingestion"])
 app.include_router(extract.router, prefix="/api/v1", tags=["entity-extraction"])
+app.include_router(match.router, prefix="/api/v1", tags=["matching-engine"])
+app.include_router(dispatch.router, prefix="/api/v1", tags=["recruitment-pipeline"])
+app.include_router(analytics.router, prefix="/api/v1", tags=["analytics"])
+app.include_router(bulk_process.router, prefix="/api/v1", tags=["bulk"])
+app.include_router(admin.router, prefix="/api/v1", tags=["admin"])
 
 @app.get("/", tags=["Health"])
 async def root():

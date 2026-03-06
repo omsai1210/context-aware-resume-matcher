@@ -48,4 +48,10 @@ def map_to_taxonomy(extracted_entities: List[str]) -> Tuple[List[str], List[str]
         else:
             unmapped_terms.append(entity)
             
+    if unmapped_terms:
+        unmapped_path = os.path.join("data", "unmapped_skills.txt")
+        with open(unmapped_path, "a", encoding="utf-8") as f:
+            for term in unmapped_terms:
+                f.write(f"{term}\n")
+                
     return list(standardized_skills), unmapped_terms
