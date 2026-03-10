@@ -4,7 +4,7 @@ import os
 
 API_URL = "http://127.0.0.1:8000/api/v1/ingest"
 
-def test_ingest_file(file_path: str):
+def run_ingest_file(file_path: str):
     """
     Sends a file to the ingest API and prints the response.
     """
@@ -52,4 +52,4 @@ I am a senior developer with 10 years of experience.
     print("Testing the `/ingest` endpoint.")
     print("Make sure your FastAPI server is running (uvicorn main:app --reload)")
     
-    test_ingest_file(txt_path)
+    run_ingest_file(txt_path)
