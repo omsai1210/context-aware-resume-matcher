@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import ingest, extract, graph, rag
+from routers import ingest, extract, graph, rag, match
 
 app = FastAPI(
     title="GraphRAG-ATS - Module 1: Document Ingestion",
@@ -21,6 +21,7 @@ app.include_router(ingest.router, prefix="/api/v1", tags=["document-ingestion"])
 app.include_router(extract.router, prefix="/api/v1", tags=["entity-extraction"])
 app.include_router(graph.router, prefix="/api/v1/graph", tags=["neo4j-graph"])
 app.include_router(rag.router, prefix="/api/v1/rag", tags=["graph-rag"])
+app.include_router(match.router, prefix="/api/v1/match", tags=["llm-scoring"])
 
 @app.get("/", tags=["Health"])
 async def root():
