@@ -43,7 +43,18 @@
   2. Pass the subgraph context to the LLM to generate a "Glass Box" summary explaining *why* the candidate matched.
 * **Output:** A ranked list of candidates with natural language justifications.
 
-## Module 6: User Interface (Dashboard)
+## Module 6: Automated End-to-End Pipeline (Webhooks & Background Tasks)
+* **Description:** Asynchronously orchestrates the entire pipeline from Google Forms submission to LLM email dispatch.
+* **Input:** Google Forms Webhook JSON (Name, Email, Drive Resume URL, Job Requirements).
+* **Process:**
+  1. Receive webhook and instantly return `200 OK`.
+  2. Background Task: Download resume from Google Drive API.
+  3. Execute Modules 1 through 5 on the downloaded resume.
+  4. Generate a personalized Accept/Reject email using the GraphRAG score and LLM Glass Box explanation.
+  5. Dispatch email via SMTP/Resend.
+* **Output:** Candidate receives an automated, LLM-generated feedback email.
+
+## Module 7: User Interface (Dashboard)
 * **Description:** The recruiter-facing application.
 * **Input:** User interactions (uploading files, selecting jobs).
 * **Process:**
